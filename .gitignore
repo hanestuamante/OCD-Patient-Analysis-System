@@ -1,0 +1,13 @@
+# Python environment
+
+ocd_env/
+__pycache__/
+*.py[cod]
+
+# Data (Nếu file CSV quá nặng hoặc chứa thông tin nhạy cảm)
+data/*.csv
+
+# macOS system files
+.DS_Store
+
+.ipynb_checkpoints/
