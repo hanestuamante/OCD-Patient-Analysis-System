@@ -14,9 +14,10 @@ src/visualizer.py: Đóng gói các hàm trực quan hóa dữ liệu nâng cao,
 main.py: File điều phối trung tâm (Orchestrator) thực thi toàn bộ quy trình từ dữ liệu thô đến kết quả phân tích.
 
 Phương pháp nghiên cứu & Kết quả (Methodology)
-1. Phân cụm học máy (Unsupervised Learning)Sử dụng Phương pháp Khuỷu tay (Elbow Method) để xác định số lượng cụm tối ưu dựa trên chỉ số $WCSS$ (Within-Cluster Sum of Squares):$$WCSS = \sum_{j=1}^{k} \sum_{x \in C_j} ||x - \mu_j||^2$$Kết quả: Số cụm tối ưu được xác định là $k=4$.Insight: Thuật toán nhận diện được Cluster 0 (Người trẻ, không di truyền) là nhóm có mức độ bệnh nặng nhất với điểm trung bình ~43.1.
-2. Kiểm định Thống kê (Statistical Inference)Phân tích ảnh hưởng của các yếu tố nhân khẩu học tới mức độ nghiêm trọng của bệnh:Tình trạng hôn nhân: Phép thử ANOVA cho thấy giá trị $P < 0.05$, khẳng định sự khác biệt có ý nghĩa thống kê. Nhóm Single có xu hướng bị nặng hơn nhóm Married.Trình độ học vấn: Biểu đồ Violin Plot chỉ ra trình độ học vấn ảnh hưởng đến hình thái phân bổ thời gian mắc bệnh, đặc biệt là nhóm Some College có sự phân tán rộng hơn về thời gian chịu đựng triệu chứng.
-3. Khai phá Luật kết hợp (Association Rules)Sử dụng thuật toán Apriori và sơ đồ mạng lưới (Network Graph) để tìm mối liên hệ giữa các loại ám ảnh và cưỡng chế. Việc này giúp dự báo các triệu chứng cưỡng chế đi kèm dựa trên loại ám ảnh của bệnh nhân.
+1. Phân cụm học máy (Unsupervised Learning)Sử dụng Phương pháp Khuỷu tay (Elbow Method) để xác định số lượng cụm tối ưu dựa trên chỉ số WCSS (Within-Cluster Sum of Squares):
+2. Insight: Thuật toán nhận diện được Cluster 0 (Người trẻ, không di truyền) là nhóm có mức độ bệnh nặng nhất với điểm trung bình ~43.1.
+3. Kiểm định Thống kê (Statistical Inference)Phân tích ảnh hưởng của các yếu tố nhân khẩu học tới mức độ nghiêm trọng của bệnh:Tình trạng hôn nhân: Phép thử ANOVA cho thấy giá trị $P < 0.05$, khẳng định sự khác biệt có ý nghĩa thống kê. Nhóm Single có xu hướng bị nặng hơn nhóm Married.Trình độ học vấn: Biểu đồ Violin Plot chỉ ra trình độ học vấn ảnh hưởng đến hình thái phân bổ thời gian mắc bệnh, đặc biệt là nhóm Some College có sự phân tán rộng hơn về thời gian chịu đựng triệu chứng.
+4. Khai phá Luật kết hợp (Association Rules)Sử dụng thuật toán Apriori và sơ đồ mạng lưới (Network Graph) để tìm mối liên hệ giữa các loại ám ảnh và cưỡng chế. Việc này giúp dự báo các triệu chứng cưỡng chế đi kèm dựa trên loại ám ảnh của bệnh nhân.
 
 Công nghệ sử dụng
 Database: MySQL
