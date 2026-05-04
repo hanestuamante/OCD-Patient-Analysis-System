@@ -1,0 +1,24 @@
+project:
+  name: OCD Patient Analysis System
+  framework: CRISP-DM
+  owner_role: Data Analyst
+
+data_source:
+  default_table: ocd_patient_dataset
+  database_env_var: OCD_DATABASE_URL
+  raw_data_path: data/raw/
+  processed_data_path: data/processed/
+
+modeling:
+  clustering:
+    algorithm: kmeans
+    n_clusters: 4
+    features:
+      - Age
+      - Total_Score
+      - Family_History_Bin
+
+reporting:
+  figure_path: reports/figures/
+  executive_report: reports/ocd_strategic_insights.md
+  alpha: 0.05

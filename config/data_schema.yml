@@ -1,0 +1,23 @@
+required_columns:
+  - Patient ID
+  - Age
+  - Gender
+  - Ethnicity
+  - Marital Status
+  - Education Level
+  - OCD Diagnosis Date
+  - Duration of Symptoms (months)
+  - Family History of OCD
+  - Obsession Type
+  - Compulsion Type
+  - Y-BOCS Score (Obsessions)
+  - Y-BOCS Score (Compulsions)
+
+numeric_ranges:
+  Age: [0, 120]
+  Duration of Symptoms (months): [0, 1200]
+  Y-BOCS Score (Obsessions): [0, 40]
+  Y-BOCS Score (Compulsions): [0, 40]
+
+quality_thresholds:
+  missingness_warning_rate: 0.05

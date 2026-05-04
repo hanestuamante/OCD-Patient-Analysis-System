@@ -1,13 +1,38 @@
-# Python environment
-
+# Local environments
+.venv/
+venv/
+env/
 ocd_env/
+
+# Python cache and build artifacts
 __pycache__/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Data (Nếu file CSV quá nặng hoặc chứa thông tin nhạy cảm)
-data/*.csv
+# Jupyter
+.ipynb_checkpoints/
 
-# macOS system files
+# Data should not be committed
+data/**
+!data/
+!data/raw/
+!data/processed/
+!data/external/
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Local secrets and database credentials
+.env
+*.sqlite
+*.db
+
+# Operating system files
 .DS_Store
 
-.ipynb_checkpoints/
+# Generated ad hoc outputs
+reports/tmp/
